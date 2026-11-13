@@ -1,0 +1,215 @@
+{
+ "start": "2026-11-13T10:14:17.774Z",
+ "round": 2,
+ "idle": 0,
+ "errors": 0,
+ "status": "pass",
+ "history": [
+  {
+   "at": "2026-11-13T11:20:35.207Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 1,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-13T11:22:09.487Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 2,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-13T11:23:38.729Z",
+   "mode": "manual",
+   "status": "pass",
+   "fails": 0,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "index.html",
+  "url": null,
+  "root": null,
+  "kind": "place",
+  "category": "restaurante bar",
+  "primary": "Reservar mesa",
+  "rounds": 3,
+  "start": "2026-11-13T10:14:17.774Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "e44399a14ab21e25:40063d41",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "27af06fcac4b67f3",
+ "page": "index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "no-visual",
+    "where": "section#reservar \"Reserva de mesas\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#reservar \"Reserva de mesas\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "scroll-reveal",
+    "where": "section#visita > div.wrap > div.grid.grid--top > figure.pl-photo.pl-photo--end",
+    "msg": "starts an animation (1.6 s) the moment it is scrolled into view (an IntersectionObserver) on img (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-buttons",
+    "where": "header.nav.nav--split > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"Reservar mesa\"",
+    "msg": "\"Reservar mesa\" does not start with a verb (book, buy, try, start, get, see...)",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-credit",
+    "where": "(the page text)",
+    "msg": "1 library source (unsplash): the page credits unsplash; confirm each shows the client's own product, place or people",
+    "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "header.nav.nav--split > div.wrap.nav__bar > a.nav__logo \"Brasolé\"",
+    "msg": "\"Brasolé\" opens a section headed \"Restaurante de brasa y bar de cócteles\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.nav.nav--split > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"reservar mesa\"",
+    "msg": "\"reservar mesa\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "assumed",
+    "where": "div.hero-text > div.hero__text > p.hero__lead > span \"desde las 12:00\"",
+    "msg": "8 facts marked as assumed, for the report: \"desde las 12:00\", \"Martes a jueves 12:00–00:00 Viernes y sábado 12:00–01:30 Dom\", \"18.40\", \"16.90\", \"12.70\", \"9.60\", \"8.90\", \"8.40\"",
+    "fix": "list each assumed fact in the report for the client to confirm, or take it from the brief",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "form-send",
+    "where": "section#reservar > div.wrap > div.grid.grid--top:nth-of-type(2) > form.form.visit--card \"mailto:reservas@brasole.example\"",
+    "msg": "the form opens a mail to reservas@brasole.example: a stand-in until the client gives its form address; list it in the report",
+    "fix": "send the form to the client's address (data-endpoint) and show the confirmation only after it answers; list a mailto stand-in in the report",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#carta \"Carta de cocina y barra\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#top > section.hero.hero--place / section#visita",
+    "msg": "119px between these sections, -52% against the median 248px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "proximity",
+    "where": "section#visita > div.wrap > div.grid.grid--top > figure.pl-photo.pl-photo--end \"Cocina y barra Martes a jueves 12:00–00:\"",
+    "msg": "stacked at this width, the visual starts 14px under the text and buttons above it (\"Cocina y barra Martes a jueves\"): it reads glued to them (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "give the stacked split the section's own gap between text and visual (40px or more on a phone)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-weight",
+    "where": "div.grid.grid--top > div.pair.span-6 > figure.pl-photo:nth-of-type(1) > img \"u-1600891964092-1600.webp\"",
+    "msg": "a photograph is 3x or more wider than drawn on the phone, with no srcset: u-1600891964092-1600.webp is 1600px (301 KB) for a 342px frame; on a phone it arrives late and its frame shows only its ground until then",
+    "fix": "give each photograph srcset and sizes (a 800px and a 1600px file), or a smaller file: the frame never shows empty",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 78,
+   "layout": 3
+  }
+ },
+ "open": [],
+ "waived": [
+  {
+   "check": "no-visual",
+   "where": "section#reservar \"Reserva de mesas\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#reservar \"Reserva de mesas\""
+   ],
+   "reason": "sections.md section 1 allows one picture-less section for a booking form; at 390 its photograph is left out so the form fits one screen and the page stays at seven screens"
+  }
+ ],
+ "warnCount": 11,
+ "at": "2026-11-13T11:23:38.729Z"
+}

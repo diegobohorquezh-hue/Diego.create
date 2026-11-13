@@ -1,0 +1,1 @@
+[{ "check": "no-visual", "target": "section#reservar", "reason": "sections.md section 1 allows one picture-less section for a booking form; at 390 its photograph is left out so the form fits one screen and the page stays at seven screens" }]

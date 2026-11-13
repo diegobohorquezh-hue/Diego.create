@@ -1,0 +1,11 @@
+{
+ "page": "index.html",
+ "url": null,
+ "root": null,
+ "kind": "place",
+ "category": "restaurante bar",
+ "primary": "Reservar mesa",
+ "rounds": 3,
+ "start": "2026-11-13T10:14:17.774Z",
+ "by": "gate.mjs --start"
+}

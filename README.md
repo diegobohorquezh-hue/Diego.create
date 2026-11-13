@@ -20,3 +20,15 @@ python3 -m http.server 8080   # y abre http://localhost:8080
 - Las fotos vienen de Unsplash; cámbialas por las del local.
 - El formulario de reservas solo muestra la confirmación: conéctalo a tu backend, a WhatsApp o a un servicio como Formspree.
 - Si el sistema del visitante tiene activado "reducir movimiento", las animaciones se desactivan.
+
+## Versión 2 (`v2/`): skill design-taste-frontend
+
+Una segunda landing, hecha al pie de la letra con la skill `design-taste-frontend` (instalada en `.claude/skills/`), para comparar con la versión animada de la raíz.
+
+- Nombre inventado y verificado: **Brasolé** (búsqueda en `v2/names.json`).
+- Diseño claro y guiado por fotos, una animación principal ("picture-develops" en la foto de la terraza), micro-interacciones al pasar el ratón.
+- Pasa la verificación final de la skill: `GATE: PASS`.
+- Horarios y precios supuestos (marcados con `data-assumed`); las fotos son provisionales de Unsplash.
+- El formulario envía a `reservas@brasole.example` (provisional): hay que poner la dirección real o un servicio de formularios en `data-endpoint`.
+
+Ver en local: `cd v2 && python3 -m http.server 8081` y abre http://localhost:8081.

@@ -1,0 +1,10 @@
+{
+  "name": "Brasolé",
+  "trade": "restaurante bar",
+  "searched": true,
+  "queries": [
+    {"query": "\"Brasolé\" restaurante bar", "result": "no business with that exact name in the first results (only Brasa Bar, Brasero, Brasa Brasil: different names)"},
+    {"query": "\"Carbonela\" restaurante", "result": "La Carbonella exists (close match): rejected"}
+  ],
+  "rejected": ["Ámbar (dictionary word)", "Carbonela (La Carbonella exists)"]
+}

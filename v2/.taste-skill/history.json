@@ -1,0 +1,48 @@
+{
+ "photos": [
+  {
+   "trade": "bar",
+   "draft": true,
+   "lead": null,
+   "ids": [],
+   "sections": [
+    "hero",
+    "bar",
+    "bar",
+    "cocktails",
+    "cocktails",
+    "food",
+    "food",
+    "kitchen",
+    "kitchen",
+    "wine",
+    "wine"
+   ],
+   "seed": "mmhs1e",
+   "at": "2026-11-13T10:14:17.892Z"
+  }
+ ],
+ "palettes": [
+  "white-signal-red"
+ ],
+ "types": [
+  "lora"
+ ],
+ "dealt": [
+  "lora",
+  "rethink",
+  "bricolage"
+ ],
+ "moments": [
+  {
+   "id": "word-highlight",
+   "at": "2026-11-13T10:18:18.038Z",
+   "seed": "e8b39ffd"
+  },
+  {
+   "id": "picture-develops",
+   "at": "2026-11-13T10:45:34.098Z",
+   "seed": "704540ff"
+  }
+ ]
+}
