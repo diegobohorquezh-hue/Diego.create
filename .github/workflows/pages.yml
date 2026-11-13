@@ -31,6 +31,7 @@ jobs:
           cp index.html _site/
           cp -r css js _site/
           rsync -a --exclude '.taste-skill' --exclude 'shots' --exclude '.gitignore' v2/ _site/v2/
+          cp -r el-ancla _site/el-ancla
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
