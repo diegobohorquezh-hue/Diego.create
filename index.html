@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ámbar — Cocina & Bar</title>
+  <meta name="description" content="Ámbar, cocina a la brasa y coctelería de autor. Reserva tu mesa.">
+  <meta name="theme-color" content="#0e0b09">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="is-loading">
+
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <span class="preloader__word">Ámbar</span>
+      <span class="preloader__count"><span data-count-loader>0</span>%</span>
+    </div>
+    <div class="preloader__curtain"></div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor is-hidden" aria-hidden="true"><span class="cursor__label"></span></div>
+  <div class="cursor-dot is-hidden" aria-hidden="true"></div>
+
+  <!-- Barra de progreso -->
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- Navegación -->
+  <header class="nav">
+    <a href="#inicio" class="nav__logo" data-magnetic>Ámbar<span>.</span></a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#historia">Historia</a>
+      <a href="#carta">Carta</a>
+      <a href="#galeria">Galería</a>
+      <a href="#noches">Noches</a>
+      <a href="#reservar" class="btn btn--small" data-magnetic>Reservar</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero__media" data-speed="0.35">
+        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=2000&q=80&auto=format&fit=crop" alt="Barra iluminada del restaurante">
+      </div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow">Cocina a la brasa · Coctelería de autor</p>
+        <h1 class="hero__title">
+          <span class="line" data-split>Fuego en la cocina,</span>
+          <span class="line line--italic" data-split>magia en la barra.</span>
+        </h1>
+        <p class="hero__sub">Un lugar para quedarse: platos que salen del carbón, cócteles que cuentan historias y música hasta tarde.</p>
+        <div class="hero__ctas">
+          <a href="#reservar" class="btn" data-magnetic><span>Reservar mesa</span></a>
+          <a href="#carta" class="btn btn--ghost" data-magnetic><span>Ver la carta</span></a>
+        </div>
+      </div>
+      <a href="#marquee" class="scroll-hint" aria-label="Bajar">
+        <span>Scroll</span><i></i>
+      </a>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Brasa</span><b>✦</b><span>Cócteles de autor</span><b>✦</b><span>Música en vivo</span><b>✦</b><span>Vinos naturales</span><b>✦</b><span>Terraza</span><b>✦</b>
+        <span>Brasa</span><b>✦</b><span>Cócteles de autor</span><b>✦</b><span>Música en vivo</span><b>✦</b><span>Vinos naturales</span><b>✦</b><span>Terraza</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- Historia -->
+    <section class="story section" id="historia">
+      <div class="story__text">
+        <p class="eyebrow" data-reveal>Nuestra historia</p>
+        <h2 class="h2" data-split>Una mesa larga, un fuego encendido y muchas ganas de celebrar.</h2>
+        <p data-reveal style="--d:.1s">Ámbar nació de una idea simple: juntar la cocina honesta de la brasa con la precisión de una gran barra de cócteles. Producto local, técnica y cero prisa.</p>
+        <div class="stats">
+          <div class="stat" data-reveal style="--d:.15s"><strong data-counter="12">0</strong><span>años encendidos</span></div>
+          <div class="stat" data-reveal style="--d:.25s"><strong data-counter="48">0</strong><span>cócteles de autor</span></div>
+          <div class="stat" data-reveal style="--d:.35s"><strong data-counter="300" data-suffix="+">0</strong><span>noches de música</span></div>
+        </div>
+      </div>
+      <figure class="story__media" data-reveal>
+        <div class="reveal-img">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80&auto=format&fit=crop" alt="Salón del restaurante" loading="lazy" data-speed="-0.08">
+        </div>
+        <div class="story__badge" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+            <text><textPath href="#circ">ÁMBAR · COCINA &amp; BAR · DESDE 2014 · </textPath></text></svg>
+          <span>✦</span>
+        </div>
+      </figure>
+    </section>
+
+    <!-- Carta -->
+    <section class="menu section" id="carta">
+      <div class="menu__head">
+        <p class="eyebrow" data-reveal>La carta</p>
+        <h2 class="h2" data-split>Para compartir (o no).</h2>
+        <div class="tabs" role="tablist">
+          <button role="tab" aria-selected="true" data-tab="cocina">Cocina</button>
+          <button role="tab" aria-selected="false" data-tab="bar">Bar</button>
+          <span class="tabs__ink" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <ul class="menu__list is-active" data-panel="cocina">
+        <li data-img="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80&auto=format&fit=crop">
+          <h3>Entraña a la brasa</h3><i></i><span class="price">$18</span>
+          <p>Chimichurri de la casa, papas rústicas, sal de humo.</p>
+        </li>
+        <li data-img="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop">
+          <h3>Costillas glaseadas</h3><i></i><span class="price">$16</span>
+          <p>Cocción lenta 12 h, glaseado de panela y ají.</p>
+        </li>
+        <li data-img="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80&auto=format&fit=crop">
+          <h3>Tabla Ámbar</h3><i></i><span class="price">$22</span>
+          <p>Selección de cortes, vegetales al carbón y salsas.</p>
+        </li>
+        <li data-img="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80&auto=format&fit=crop">
+          <h3>Pizza de horno de leña</h3><i></i><span class="price">$13</span>
+          <p>Masa madre 48 h, mozzarella fresca, albahaca.</p>
+        </li>
+        <li data-img="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80&auto=format&fit=crop">
+          <h3>Bowl del huerto</h3><i></i><span class="price">$11</span>
+          <p>Granos, vegetales asados, huevo pochado, aderezo cítrico.</p>
+        </li>
+      </ul>
+
+      <ul class="menu__list" data-panel="bar">
+        <li data-img="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80&auto=format&fit=crop">
+          <h3>Old Fashioned ahumado</h3><i></i><span class="price">$10</span>
+          <p>Bourbon, bitter de cacao, humo de canela.</p>
+        </li>
+        <li data-img="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80&auto=format&fit=crop">
+          <h3>Trilogía de la casa</h3><i></i><span class="price">$24</span>
+          <p>Tres cócteles de autor para descubrir la barra.</p>
+        </li>
+        <li data-img="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&q=80&auto=format&fit=crop">
+          <h3>Postre líquido</h3><i></i><span class="price">$9</span>
+          <p>Licor de café, helado artesanal, galleta crocante.</p>
+        </li>
+        <li data-img="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&auto=format&fit=crop">
+          <h3>Copa de vino natural</h3><i></i><span class="price">$8</span>
+          <p>Selección rotativa de pequeños productores.</p>
+        </li>
+      </ul>
+      <div class="menu__preview" aria-hidden="true"><img alt=""></div>
+    </section>
+
+    <!-- Cóctel animado -->
+    <section class="pour section">
+      <div class="pour__glass" aria-hidden="true">
+        <svg viewBox="0 0 200 260">
+          <defs>
+            <clipPath id="glassClip"><path d="M30 20 L170 20 L110 130 L110 210 L90 210 L90 130 Z"/></clipPath>
+            <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f6b44b"/><stop offset="1" stop-color="#c2410c"/>
+            </linearGradient>
+          </defs>
+          <g clip-path="url(#glassClip)">
+            <rect class="pour__liquid" x="0" y="20" width="200" height="113" fill="url(#liquid)"/>
+            <path class="pour__wave" d="M0 0 Q 25 -8 50 0 T 100 0 T 150 0 T 200 0 T 250 0 T 300 0 T 350 0 T 400 0 V 20 H 0 Z" fill="#f6b44b"/>
+            <circle class="bubble" cx="80" cy="120" r="3"/><circle class="bubble" cx="100" cy="125" r="2"/>
+            <circle class="bubble" cx="115" cy="118" r="2.5"/><circle class="bubble" cx="92" cy="128" r="1.8"/>
+          </g>
+          <path d="M30 20 L170 20 L110 130 L110 210 L90 210 L90 130 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M55 240 L145 240 M100 210 L100 240" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <g class="pour__garnish"><circle cx="150" cy="24" r="16" fill="none" stroke="#a3e635" stroke-width="3"/><path d="M150 8 V40 M134 24 H166 M139 13 L161 35 M161 13 L139 35" stroke="#a3e635" stroke-width="1.5"/></g>
+        </svg>
+      </div>
+      <div class="pour__text">
+        <p class="eyebrow" data-reveal>Happy hour</p>
+        <h2 class="h2" data-split>De 18:00 a 20:00, el segundo cóctel corre por nuestra cuenta.</h2>
+        <p data-reveal style="--d:.1s">De martes a viernes. Válido para toda la carta de autor.</p>
+        <a href="#reservar" class="btn" data-magnetic data-reveal style="--d:.2s"><span>Apartar mi lugar</span></a>
+      </div>
+    </section>
+
+    <!-- Galería horizontal -->
+    <section class="hscroll" id="galeria">
+      <div class="hscroll__sticky">
+        <div class="hscroll__head">
+          <p class="eyebrow">Galería</p>
+          <h2 class="h2">Así se vive Ámbar</h2>
+        </div>
+        <div class="hscroll__track">
+          <figure class="hcard"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=900&q=80&auto=format&fit=crop" alt="La barra" loading="lazy"><figcaption>01 — La barra</figcaption></figure>
+          <figure class="hcard hcard--tall"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&q=80&auto=format&fit=crop" alt="Cóctel servido" loading="lazy"><figcaption>02 — Servicio</figcaption></figure>
+          <figure class="hcard"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80&auto=format&fit=crop" alt="Terraza junto al agua" loading="lazy"><figcaption>03 — Terraza</figcaption></figure>
+          <figure class="hcard hcard--tall"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=900&q=80&auto=format&fit=crop" alt="Carne a la brasa" loading="lazy"><figcaption>04 — Brasa</figcaption></figure>
+          <figure class="hcard"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&auto=format&fit=crop" alt="Mesa servida" loading="lazy"><figcaption>05 — Sobremesa</figcaption></figure>
+          <figure class="hcard hcard--tall"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=900&q=80&auto=format&fit=crop" alt="Tres cócteles" loading="lazy"><figcaption>06 — Coctelería</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Noches -->
+    <section class="nights section" id="noches">
+      <p class="eyebrow" data-reveal>Cada semana</p>
+      <h2 class="h2" data-split>Noches que no se repiten.</h2>
+      <div class="nights__grid">
+        <article class="night" data-tilt data-reveal style="--d:.05s">
+          <span class="night__day">Jue</span>
+          <h3>Jazz & vinilos</h3>
+          <p>Trío en vivo desde las 21:00. Maridaje de vinos naturales.</p>
+          <span class="night__shine" aria-hidden="true"></span>
+        </article>
+        <article class="night" data-tilt data-reveal style="--d:.15s">
+          <span class="night__day">Vie</span>
+          <h3>DJ en la barra</h3>
+          <p>House y disco hasta la 1:00. Carta de cócteles extendida.</p>
+          <span class="night__shine" aria-hidden="true"></span>
+        </article>
+        <article class="night" data-tilt data-reveal style="--d:.25s">
+          <span class="night__day">Dom</span>
+          <h3>Brunch al carbón</h3>
+          <p>De 11:00 a 16:00. Huevos, brasa y mimosas sin fin.</p>
+          <span class="night__shine" aria-hidden="true"></span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="quotes section" aria-label="Opiniones">
+      <div class="quotes__wrap">
+        <blockquote class="quote is-active"><p>“La entraña más jugosa que he probado, y el Old Fashioned ahumado es un espectáculo.”</p><cite>— Andrea M.</cite></blockquote>
+        <blockquote class="quote"><p>“Fuimos por un trago y nos quedamos hasta el cierre. La música, perfecta.”</p><cite>— Luis P.</cite></blockquote>
+        <blockquote class="quote"><p>“El brunch del domingo ya es tradición familiar.”</p><cite>— Camila R.</cite></blockquote>
+      </div>
+      <div class="quotes__dots" role="tablist" aria-label="Elegir opinión">
+        <button aria-label="Opinión 1" class="is-active"></button><button aria-label="Opinión 2"></button><button aria-label="Opinión 3"></button>
+      </div>
+    </section>
+
+    <!-- Reservas -->
+    <section class="booking section" id="reservar">
+      <div class="booking__info">
+        <p class="eyebrow" data-reveal>Reservas</p>
+        <h2 class="h2" data-split>Guardamos tu mesa.</h2>
+        <dl class="info" data-reveal style="--d:.1s">
+          <div><dt>Horario</dt><dd>Mar–Jue 12:00–23:00<br>Vie–Sáb 12:00–01:00<br>Dom 11:00–17:00</dd></div>
+          <div><dt>Dirección</dt><dd>Av. Principal 123<br>Tu ciudad</dd></div>
+          <div><dt>Contacto</dt><dd><a href="tel:+000000000">+00 000 000 000</a><br><a href="mailto:reservas@ambar.example">reservas@ambar.example</a></dd></div>
+        </dl>
+      </div>
+      <form class="form" data-reveal style="--d:.15s" novalidate>
+        <div class="field"><input id="f-name" name="nombre" required placeholder=" " autocomplete="name"><label for="f-name">Nombre</label></div>
+        <div class="field"><input id="f-phone" name="telefono" type="tel" required placeholder=" " autocomplete="tel"><label for="f-phone">Teléfono</label></div>
+        <div class="field-row">
+          <div class="field"><input id="f-date" name="fecha" type="date" required placeholder=" "><label for="f-date">Fecha</label></div>
+          <div class="field"><input id="f-time" name="hora" type="time" required placeholder=" "><label for="f-time">Hora</label></div>
+        </div>
+        <div class="field">
+          <select id="f-people" name="personas" required>
+            <option value="2">2 personas</option><option value="3">3 personas</option><option value="4">4 personas</option><option value="5">5 personas</option><option value="6">6+ personas</option>
+          </select>
+          <label for="f-people" class="is-static">Personas</label>
+        </div>
+        <button class="btn btn--full" type="submit" data-magnetic><span>Confirmar reserva</span></button>
+        <div class="form__done" aria-live="polite">
+          <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27 l7 7 l15 -16"/></svg>
+          <p>¡Listo! Te confirmaremos por teléfono.</p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__big" aria-hidden="true"><div class="footer__track"><span>Ámbar · Cocina & Bar · </span><span>Ámbar · Cocina & Bar · </span></div></div>
+    <div class="footer__row">
+      <p>© <span data-year></span> Ámbar. Todos los derechos reservados.</p>
+      <p class="footer__social"><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="TikTok">TikTok</a><a href="#inicio">Volver arriba ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
