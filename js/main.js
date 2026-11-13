@@ -185,7 +185,7 @@
   if (marqueeAnim && !reduced) {
     let rate = 1;
     const loop = () => {
-      rate = lerp(rate, 1 + Math.min(velocity, 80) / 12, 0.08);
+      rate = body.classList.contains('is-paused') ? 0 : lerp(rate || 1, 1 + Math.min(velocity, 80) / 12, 0.08);
       velocity *= 0.9;
       marqueeAnim.playbackRate = rate;
       requestAnimationFrame(loop);
@@ -205,7 +205,7 @@
       if (k === qi) { void d.offsetWidth; d.classList.add('is-active'); }
     });
     clearTimeout(qTimer);
-    if (!reduced) qTimer = setTimeout(() => showQuote(qi + 1), 6000);
+    if (!reduced && !body.classList.contains('is-paused')) qTimer = setTimeout(() => showQuote(qi + 1), 6000);
   };
   dots.forEach((d, k) => d.addEventListener('click', () => showQuote(k)));
   const qIO = new IntersectionObserver(([e]) => {
@@ -233,6 +233,25 @@
   });
 
   $('[data-year]').textContent = new Date().getFullYear();
+
+  /* ---------- Pausar animaciones continuas (accesibilidad) ---------- */
+  const motionBtn = $('.motion-toggle');
+  let paused = false;
+  try { paused = localStorage.getItem('ambar-paused') === '1'; } catch (e) {}
+  const applyPause = () => {
+    body.classList.toggle('is-paused', paused);
+    motionBtn.setAttribute('aria-pressed', paused);
+    $('span', motionBtn).textContent = paused ? 'Reanudar animaciones' : 'Pausar animaciones';
+    motionBtn.setAttribute('aria-label', paused ? 'Reanudar animaciones' : 'Pausar animaciones');
+    if (paused) clearTimeout(qTimer);
+  };
+  motionBtn.addEventListener('click', () => {
+    paused = !paused;
+    try { localStorage.setItem('ambar-paused', paused ? '1' : '0'); } catch (e) {}
+    applyPause();
+    if (!paused) showQuote(qi);
+  });
+  applyPause();
 
   /* ---------- Solo con puntero fino ---------- */
   if (!finePointer || reduced) return;
